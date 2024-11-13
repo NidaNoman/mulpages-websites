@@ -1,8 +1,14 @@
-
 import Image from "next/image";
 import Footer from "./footer";
 
-const Card = ({ title, description, imgSrc }: any) => {
+
+interface CardProps {
+  title: string;
+  description: string;
+  imgSrc: string;
+}
+
+const Card = ({ title, description, imgSrc }: CardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-w-xs">
       <Image
@@ -41,12 +47,12 @@ export default function Home() {
 
   return (
     <div className="w-full min-h-screen">
-      {/* Background Image */}
+      
       <div
         className="relative w-full h-[60vh] bg-cover bg-center"
         style={{ backgroundImage: "url('/image/skin-pic.jpg')" }}
       >
-        {/* Text Overlay */}
+        
         <div className="flex flex-col items-center justify-center h-full text-center px-4">
           <h1 className="text-white italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             Welcome to Skin Bliss Skincare
@@ -60,7 +66,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Cards Section */}
+    
       <div className="py-10 bg-white">
         <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-serif mb-6">
           Latest Products
@@ -77,7 +83,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Footer */}
+      
       <Footer />
     </div>
   );

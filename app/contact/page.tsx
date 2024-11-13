@@ -1,5 +1,4 @@
 
-import Head from 'next/head';
 import Footer from '../footer';
 
 export default function Contact() {

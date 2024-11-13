@@ -1,5 +1,4 @@
 
-import Link from 'next/link';
 import Footer from '../footer';
 
 const About = () => {
